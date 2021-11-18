@@ -1,4 +1,4 @@
-package com.lyi.letian;
+package com.lyi.mock;
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -7,6 +7,7 @@ import static org.mockito.Mockito.when;
 
 
 public class ExampleServiceTest {
+
 
     @Test
     public void test() {

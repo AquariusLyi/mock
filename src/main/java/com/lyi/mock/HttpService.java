@@ -1,4 +1,4 @@
-package com.lyi.letian;
+package com.lyi.mock;
 
 import java.util.Random;
 
