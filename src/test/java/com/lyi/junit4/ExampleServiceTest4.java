@@ -1,17 +1,18 @@
 package com.lyi.junit4;
 
-import com.lyi.mock.ExampleService;
-import com.lyi.mock.HttpService;
+import com.lyi.mockito.ExampleService;
+import com.lyi.mockito.HttpService;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
 import org.mockito.junit.MockitoJUnitRunner;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import static org.mockito.ArgumentMatchers.anyInt;
+import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 @RunWith(MockitoJUnitRunner.class)
@@ -80,10 +81,23 @@ public class ExampleServiceTest4 {
 
     @Test
     public void testArrayList() {
+        // 这里就是精准匹配
         when(mockArrayList.get(0)).thenReturn("abc");
         System.out.println(mockArrayList.get(0).length());
         Assert.assertEquals(3, mockArrayList.get(0).length());
+        // 使用 Mockito.anyInt() 匹配所有的 int 这样每次一次取都是a
+        when(mockArrayList.get(anyInt())).thenReturn("a");
+        Assert.assertEquals("a", mockArrayList.get(0));
+        Assert.assertEquals("a", mockArrayList.get(1));
+
+        doReturn(1).when(mockArrayList.get(0));
+        String s = mockArrayList.get(0);
+        Assert.assertEquals(1, mockArrayList.get(0));
+
+
     }
+
+
 
 
 

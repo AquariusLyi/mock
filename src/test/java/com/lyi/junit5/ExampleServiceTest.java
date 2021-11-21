@@ -1,7 +1,7 @@
 package com.lyi.junit5;
 
-import com.lyi.mock.ExampleService;
-import com.lyi.mock.HttpService;
+import com.lyi.mockito.ExampleService;
+import com.lyi.mockito.HttpService;
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 

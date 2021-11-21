@@ -1,4 +1,4 @@
-package com.lyi.mock;
+package com.lyi.mockito;
 
 import java.util.Random;
 

@@ -1,4 +1,4 @@
-package com.lyi.mock;
+package com.lyi.mockito;
 
 public class Main {
 
