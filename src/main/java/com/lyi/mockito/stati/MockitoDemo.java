@@ -10,7 +10,7 @@ import org.powermock.modules.junit4.PowerMockRunner;
 
 import java.util.List;
 
-import static org.mockito.Mockito.*;
+import static org.mockito.Mockito.when;
 
 @RunWith(PowerMockRunner.class)     // 这是必须的
 @PrepareForTest(ExampleService.class)  // 声明要处理 ExampleService
